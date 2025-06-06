@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioridade-Defesa civil</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+
+<body>
+  <button onclick="topFunction()" id="backToTopBtn">↑</button>
+  
+  
+<div class="loader"></div>
+    <header>
+        <h1>Cadastro de Pessoas com Mobilidade Reduzida para Resgates da Defesa Civil</h1>
+        <p>Ajude a Defesa Civil a identificar e priorizar o resgate de pessoas em situação de vulnerabilidade durante
+            enchentes e emergências.</p>
+    </header>
+
+    <nav class="opcoes_menu">
+        <div id="nav-menu">
+            <a href="cadastrar.html" class="link-transicao">Cadastrar</a>
+            <a href="contato.html" class="link-transicao">Contato</a>
+            <a href="faq.html" class="link-transicao">Perguntas frequentes</a>
+            <a href="integrantes.html" class="link-transicao">Conheça nossa equipe</a>
+            <a href="noticias.html" class="link-transicao">Veja as noticias recentes</a>
+        </div>
+    </nav>
+
+    <section>
+        <h2>Quem pode se cadastrar?</h2>
+        <ul>
+            <li>Idosos com dificuldades de locomoção 🧓</li>
+            <li>Pessoas com deficiência física ♿</li>
+            <li>Pessoas acamadas ou com doenças graves 🏥</li>
+            <li>Gestantes em situações de risco 🤰</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Como funciona o processo de resgate?</h2>
+        <p>Durante enchentes ou outras emergências, a Defesa Civil utiliza os dados do sistema para localizar
+            rapidamente as pessoas em situação de vulnerabilidade cadastradas. Equipes de resgate são direcionadas com
+            base em prioridade e localização.</p>
+            <img src="/img/Gemini_Generated_Image_x3jwspx3jwspx3jw.png" alt="foto_pessoas_resgatadas">
+    </section>
+
+
+    <section>
+        <h2>Como fazer o cadastro?</h2>
+        <ol>
+            <li>Acesse a página de cadastro</li>
+            <li>Informe os dados da pessoa em situação de vulnerabilidade</li>
+            <li>Confirme o endereço com ponto de referência</li>
+            <li>Pronto! Seu cadastro será utilizado pela Defesa Civil em casos de emergência.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Abrigos disponíveis na sua região</h2>
+        <p>Em breve, você poderá consultar um mapa interativo com os abrigos mais próximos.</p>
+        <img src="/img/Gemini_Generated_Image_qngjyiqngjyiqngj.png" alt="foto pessoas em abrigo">
+
+    </section>
+
+    <section>
+        <h2>Precisa de ajuda?</h2>
+        <p>Em caso de dúvidas ou dificuldades com o cadastro, entre em contato com a Defesa Civil pelo número:
+            <strong>199</strong></p>
+    </section>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "86f93a67-ad0d-4490-9257-abe88ed0413c",
+            region: "us-east",
+            serviceInstanceID: "bcb15fe9-6961-45b5-8f28-0ce868d41e18",
+            onLoad: async (instance) => {
+            // Personalização do estilo do chat
+            instance.updateCSSVariables({
+                '$launcherSize': '80px',
+                '$launcherPosition': 'right',
+                '$focus': '#0072c3',
+                '$hoverPrimary': '#005a9c',
+                '$interactive01': '#0072c3',
+                '$interactive02': '#003f5c'
+            });
+
+            await instance.render();
+            }
+        };
+
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+                    (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+                    "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        }, 0);
+    </script>
+
+
+    <footer>
+        <p>© 2025 Defesa Civil - Todos os direitos reservados.</p>
+        <p>Contato: <a href="tel:199">199</a> | Email: <a href="mailto:contato@defesacivil.gov.br">contato@defesacivil.gov.br</a></p>
+    </footer>
+
+    
+
+<script src="app.js" defer></script>
+</body>
+
+
+</html>

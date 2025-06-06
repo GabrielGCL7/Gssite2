@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Pessoas – Áreas de Risco</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <button onclick="topFunction()" id="backToTopBtn">↑</button>
+  
+
+  <div class="loader"></div>
+  <header>
+    <h1>Cadastro de Pessoa em Área de Risco</h1>
+    <p>Nosso compromisso é cuidar e proteger pessoas em situação de vulnerabilidade.</p>
+  </header>
+
+  <nav class="opcoes_menu">
+    <div id="nav-menu">
+       <a href="index.html" class="link-transicao">Página Inicial</a>
+       <a href="contato.html" class="link-transicao">Contato</a>
+       <a href="faq.html" class="link-transicao">Perguntas frequentes</a>
+       <a href="integrantes.html" class="link-transicao">Conheça nossa equipe</a>
+       <a href="noticias.html" class="link-transicao">Veja as noticias recentes</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="descricao">
+      <h2>Por que é importante se cadastrar?</h2>
+      <p>
+        O cadastro ajuda a Defesa Civil a identificar as pessoas que vivem em áreas de risco e que possam precisar de auxílio prioritário em casos de emergência, garantindo atendimento rápido e eficiente.
+      </p>
+    </section>
+
+    <section class="instrucoes">
+      <h2>Instruções para o preenchimento</h2>
+      <ul>
+        <li>Preencha todos os campos obrigatórios (*) com atenção.</li>
+        <li>O número de telefone deve conter apenas dígitos, com DDD, sem espaços ou traços.</li>
+        <li>Informações sobre dificuldade de locomoção são essenciais para priorização.</li>
+        <li>Use o campo de observações para adicionar informações importantes, como doenças, contatos de emergência, etc.</li>
+      </ul>
+    </section>
+
+    <section class="form-cadastro">
+      <form id="formCadastro" novalidate>
+        <label for="nome">Nome completo: *</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade: *</label>
+        <input type="number" id="idade" name="idade" min="0" max="120" required>
+
+        <label for="endereco">Endereço: *</label>
+        <input type="text" id="endereco" name="endereco" required>
+
+        <label for="telefone">Telefone: * <small>(Somente números, ex: 11999998888)</small></label>
+        <input type="tel" id="telefone" name="telefone" pattern="^\d{10,11}$" placeholder="Somente números, ex: 11999998888" required>
+
+        <label for="locomocao">Dificuldade de locomoção: *</label>
+        <select id="locomocao" name="locomocao" required>
+          <option value="">Selecione...</option>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes" placeholder="Ex: Doenças, contatos de emergência, etc."></textarea>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "86f93a67-ad0d-4490-9257-abe88ed0413c",
+            region: "us-east",
+            serviceInstanceID: "bcb15fe9-6961-45b5-8f28-0ce868d41e18",
+            onLoad: async (instance) => {
+            // Personalização do estilo do chat
+            instance.updateCSSVariables({
+                '$launcherSize': '80px',
+                '$launcherPosition': 'right',
+                '$focus': '#0072c3',
+                '$hoverPrimary': '#005a9c',
+                '$interactive01': '#0072c3',
+                '$interactive02': '#003f5c'
+            });
+
+            await instance.render();
+            }
+        };
+
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+                    (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+                    "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        }, 0);
+    </script>
+
+  <footer>
+    <p>© 2025 Defesa Civil - Todos os direitos reservados.</p>
+    <p>Contato: <a href="tel:199">199</a> | Email: <a href="mailto:contato@defesacivil.gov.br">contato@defesacivil.gov.br</a></p>
+  </footer>
+
+
+<script src="app.js" defer></script>
+</body>
+</html>

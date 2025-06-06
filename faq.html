@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Perguntas Frequentes</title>
+  <link rel="stylesheet" href="Style.css">
+  
+</head>
+
+<body>
+ <button onclick="topFunction()" id="backToTopBtn">↑</button>
+  
+
+<div class="loader"></div>
+  <header>
+    <h1>Perguntas Frequentes (FAQ)</h1>
+    <p>Veja abaixo as dúvidas mais comuns sobre o cadastro e funcionamento do sistema da Defesa Civil.</p>
+  </header>
+
+   <nav class="opcoes_menu">
+    <div id="nav-menu">
+      <a href="index.html" class="link-transicao">Pagina inicial</a>
+      <a href="cadastrar.html" class="link-transicao">Cadastrar</a>
+      <a href="contato.html" class="link-transicao">Contato</a>
+      <a href="integrantes.html" class="link-transicao">Conheça nossa equipe</a>
+      <a href="noticias.html" class="link-transicao">Veja as noticias recentes</a>
+    </div>
+  </nav>
+
+  <section class="faq-item">
+    <div class="faq-pergunta">❓ Quem pode se cadastrar?</div>
+    <div class="faq-resposta">Qualquer pessoa em situação de vulnerabilidade, como idosos, pessoas com deficiência, acamados ou gestantes em risco.</div>
+  </section>
+
+  <section class="faq-item">
+    <div class="faq-pergunta">❓ Preciso pagar algo para me cadastrar?</div>
+    <div class="faq-resposta">Não. O cadastro é totalmente gratuito e tem como objetivo auxiliar no resgate em situações de emergência.</div>
+  </section>
+
+  <section class="faq-item">
+    <div class="faq-pergunta">❓ Meus dados estão seguros?</div>
+    <div class="faq-resposta">Sim. Os dados são utilizados exclusivamente pela Defesa Civil em casos de emergência e não são compartilhados com terceiros.</div>
+  </section>
+
+  <section class="faq-item">
+    <div class="faq-pergunta">❓ Como posso atualizar meus dados?</div>
+    <div class="faq-resposta">Em breve, será disponibilizada uma área de edição. Por enquanto, entre em contato pelo número <strong>199</strong> para solicitar alterações.</div>
+  </section>
+
+  <section class="faq-item">
+    <div class="faq-pergunta">❓ E se eu mudar de endereço?</div>
+    <div class="faq-resposta">É importante manter o endereço atualizado para que a localização seja precisa durante o resgate. Ligue para o <strong>199</strong> para atualizar seus dados.</div>
+  </section>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "86f93a67-ad0d-4490-9257-abe88ed0413c",
+            region: "us-east",
+            serviceInstanceID: "bcb15fe9-6961-45b5-8f28-0ce868d41e18",
+            onLoad: async (instance) => {
+            // Personalização do estilo do chat
+            instance.updateCSSVariables({
+                '$launcherSize': '80px',
+                '$launcherPosition': 'right',
+                '$focus': '#0072c3',
+                '$hoverPrimary': '#005a9c',
+                '$interactive01': '#0072c3',
+                '$interactive02': '#003f5c'
+            });
+
+            await instance.render();
+            }
+        };
+
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+                    (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+                    "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        }, 0);
+    </script>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const perguntas = document.querySelectorAll('.faq-pergunta');
+
+        perguntas.forEach(pergunta => {
+          pergunta.style.cursor = 'pointer';
+          pergunta.addEventListener('click', () => {
+            const resposta = pergunta.nextElementSibling;
+            if (!resposta) return;
+
+            const visivel = window.getComputedStyle(resposta).display === 'block';
+
+            // Fecha todas as respostas
+            document.querySelectorAll('.faq-resposta').forEach(r => {
+              r.style.display = 'none';
+            });
+
+            // Abre ou fecha a resposta clicada
+            resposta.style.display = visivel ? 'none' : 'block';
+          });
+        });
+      });
+    </script>
+
+
+  <footer>
+   <p>© 2025 Defesa Civil - Todos os direitos reservados.</p>
+   <p>Contato: <a href="tel:199">199</a> | Email: <a href="mailto:contato@defesacivil.gov.br">contato@defesacivil.gov.br</a></p>
+  </footer>
+
+  
+
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Integrantes - Defesa Civil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+  <button onclick="topFunction()" id="backToTopBtn">↑</button>
+  
+
+<div class="loader"></div>
+  <header>
+    <h1>Equipe do Projeto - Defesa Civil</h1>
+    <p>Somos um grupo dedicado a criar soluções que facilitam o trabalho da Defesa Civil e ajudam pessoas em situação de vulnerabilidade.</p>
+    <p>Nossa missão é garantir que pessoas com mobilidade reduzida tenham prioridade e segurança em situações de emergência.</p>
+  </header>
+
+  <nav class="opcoes_menu">
+    <div id="nav-menu">
+      <a href="index.html" class="link-transicao">Página Inicial</a>
+      <a href="cadastrar.html" class="link-transicao">Cadastrar</a>
+      <a href="contato.html" class="link-transicao">Contato</a>
+      <a href="faq.html" class="link-transicao">Perguntas frequentes</a>
+      <a href="noticias.html" class="link-transicao">Veja as noticias recentes</a>
+    </div>
+  </nav>
+
+  <section class="integrantes-container">
+
+    <div class="integrante">
+      <img src="img/WhatsApp Image 2025-05-20 at 15.31.35.jpeg" alt="Foto de Gabriel Camargo" />
+      <h3>Gabriel Camargo</h3>
+      <p><em>Desenvolvedor Front-end</em></p>
+      <p class="bio">Especialista em interfaces intuitivas e acessíveis, Gabriel garante que o sistema seja fácil de usar por todos, incluindo pessoas com necessidades especiais.</p>
+      <div class="botao-links">
+        <a href="https://www.linkedin.com/in/gabriel-camargo-07470b352/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/GabrielGCL7" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+    <div class="integrante">
+      <img src="img/yan.jpeg" alt="Foto de Yan" />
+      <h3>Yan Hideki</h3>
+      <p><em>Designer e UX</em></p>
+      <p class="bio">Yan foca em criar uma experiência agradável e acessível, usando princípios de design universal para garantir inclusão e usabilidade máxima.</p>
+      <div class="botao-links">
+        <a href="https://www.linkedin.com/in/yan-hideki-yashiki-428853294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Shaolindarius" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+    <div class="integrante">
+      <img src="img/luiz.jpg" alt="Foto de Luis" />
+      <h3>Luis Guilherme</h3>
+      <p><em>Desenvolvedor Back-end</em></p>
+      <p class="bio">Luiz é responsável pela infraestrutura, garantindo que o sistema seja rápido, seguro e confiável em situações críticas.</p>
+      <div class="botao-links">
+        <a href="https://www.linkedin.com/in/luis130505/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Akipato13" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="tecnologias">
+    <h2>Tecnologias utilizadas no projeto</h2>
+    <ul>
+      <li>HTML5, CSS3 e JavaScript para desenvolvimento front-end</li>
+      <li>CSS personalizado para layout responsivo e acessível em dispositivos móveis</li>
+      <li>Back-end em Node.js com banco de dados seguro</li>
+      <li>Integração com APIs para localização e mapeamento</li>
+      <li>Práticas de design inclusivo para pessoas com deficiência</li>
+    </ul>
+  </section>
+
+  <section class="ajuda">
+    <h2>Como você pode ajudar</h2>
+    <ul>
+      <li>Divulgando o sistema para pessoas que possam se beneficiar do cadastro</li>
+      <li>Compartilhando informações e orientações em suas redes sociais e comunidades</li>
+      <li>Contribuindo com feedback para melhorar a usabilidade e acessibilidade do sistema</li>
+      <li>Participando de voluntariados e ações locais da Defesa Civil</li>
+    </ul>
+  </section>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "86f93a67-ad0d-4490-9257-abe88ed0413c",
+            region: "us-east",
+            serviceInstanceID: "bcb15fe9-6961-45b5-8f28-0ce868d41e18",
+            onLoad: async (instance) => {
+            // Personalização do estilo do chat
+            instance.updateCSSVariables({
+                '$launcherSize': '80px',
+                '$launcherPosition': 'right',
+                '$focus': '#0072c3',
+                '$hoverPrimary': '#005a9c',
+                '$interactive01': '#0072c3',
+                '$interactive02': '#003f5c'
+            });
+
+            await instance.render();
+            }
+        };
+
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+                    (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+                    "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        }, 0);
+    </script>
+
+  <footer>
+    <p>© 2025 Defesa Civil - Todos os direitos reservados.</p>
+    <p>Contato: <a href="tel:199">199</a> | Email: <a href="mailto:contato@defesacivil.gov.br">contato@defesacivil.gov.br</a></p>
+  </footer>
+
+  
+<script src="app.js" defer></script>
+</body>
+</html>
